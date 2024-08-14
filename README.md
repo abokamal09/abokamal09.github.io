@@ -71,4 +71,4 @@ Feel free to fork this repository and submit pull requests. For major changes, p
 
 ### Contact
 If you have any questions or issues, please open an issue on this repository or contact 
-- mail: ahmedhosam.dev@gmail.com
+- mail: abokamal.dev@gmail.com
