@@ -1,5 +1,5 @@
 # Tags
 
-Following is a list of relevant tags:
+القائمة التالية تعرض الاوسمة المتكررة:
 
 <!-- material/tags -->

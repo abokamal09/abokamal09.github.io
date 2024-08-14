@@ -1,5 +1,9 @@
 site_name: Ahmed Kamal
-site_url: https://mydomain.org/
+site_author: Ahmed Kamal
+site_description: Linux and Open Source Software, and more content.
+site_url: https://abokamal09.github.io
+repo_url: https://github.com/abokamal09/abokamal09.github.io
+
 theme:
   language: ar
   logo: logo.png
@@ -50,11 +54,14 @@ theme:
     - content.code.copy
 
 plugins:
+  - offline
   - search
   - blog:
       archive: false
+      post_excerpt: optional
   - tags:
       tags_file: tags.md
+  - glightbox
 
 markdown_extensions:
   - attr_list
@@ -70,6 +77,14 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 nav:
   - الصفحة الرئيسية: index.md
@@ -78,7 +93,7 @@ nav:
       - عن المدونة: about/about-my-blog.md
   - المدونة:
       - blog/index.md
-  - Tags: tags.md
+  - الأوسمة: tags.md
 
 extra:
   generator: false

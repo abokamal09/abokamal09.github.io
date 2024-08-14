@@ -1,23 +1,20 @@
 ---
+title: صفحتي الرئيسية
 hide:
   - navigation
   - toc
+extra:
+  show_articles: true
 ---
 
-# :octicons-home-16: Welcome to MkDocs
+# أهلا بك في موقعي المتواضع!!
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+أسمي أحمد كمال، مهندس برمجيات واكتب عدد من المقالات.<br>
+أتمنى أن تنال اعجابكم :heart:
 
-## Commands
+![](assets/hero.png)
 
-- `mkdocs new [dir-name]` - Create a new project.
-- `mkdocs serve` - Start the live-reloading docs server.
-- `mkdocs build` - Build the documentation site.
-- `mkdocs -h` - Print help message and exit.
+## لمزيد من المعلومات:
 
-## Project layout
+### <a href="/about/about-me.html">حول</a> || روابط مواقع التواصل الاجتماعي تجدها في الاسفل
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
