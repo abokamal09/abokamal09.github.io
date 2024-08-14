@@ -1,0 +1,91 @@
+site_name: Ahmed Kamal
+site_url: https://mydomain.org/
+theme:
+  language: ar
+  logo: logo.png
+  favicon: logo.png
+  font:
+    text: Tajawal
+
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/auto-fix
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: black
+      accent: green
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: black
+      accent: green
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to system preference
+  name: material
+
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+    - navigation.prune
+    - toc.follow
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+
+plugins:
+  - search
+  - blog:
+      archive: false
+  - tags:
+      tags_file: tags.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+nav:
+  - الصفحة الرئيسية: index.md
+  - حول:
+      - عن المطور: about/about-me.md
+      - عن المدونة: about/about-my-blog.md
+  - المدونة:
+      - blog/index.md
+  - Tags: tags.md
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/abokamal09
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/ahmedkamaldev/
+
+copyright: حقوق النشر &copy; 2024 - 2025 أحمد كمال
