@@ -19,6 +19,8 @@
 
 ## شكر خاص للمساهمين
 
+<p hidden>"نوري، الداعم النفسي الاول، وخط الدفاع ضد الاكتئاب، السبب وراء محافظتي على التقدم والتطور لوعد قطعته سابقآ، شكرا لكل نفس يخرج منك."</p>
+
 - <b>أحمد مكاوي:</b> مقترح الفكرة وصديق الطفولة:blue_heart:
     * :simple-facebook: <a href="https://www.facebook.com/mekawy2k?mibextid=JRoKGi">Farida Ashraf Photography</a>
 - <b>فريدة:</b> قامت بتصميم اللوجو :blue_heart:
