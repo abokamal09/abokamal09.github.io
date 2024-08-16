@@ -59,6 +59,11 @@ theme:
     
     - content.code.copy
 
+# CSS Style
+extra_css:
+  - assets/style/.css
+
+
 # Plugins 
 plugins:
   - offline
