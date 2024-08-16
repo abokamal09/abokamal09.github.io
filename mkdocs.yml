@@ -1,13 +1,19 @@
-site_name: Ahmed Kamal
+# General information
+site_name: AK Blog
 site_author: Ahmed Kamal
 site_description: Linux and Open Source Software, and more content.
+copyright: حقوق النشر &copy; 2024 - 2025 أحمد كمال
 site_url: https://abokamal09.github.io
 repo_url: https://github.com/abokamal09/abokamal09.github.io
 
+# Themes settings
 theme:
   language: ar
-  logo: logo.png
-  favicon: logo.png
+  custom_dir: overrides
+  name: material
+  logo: /assets/logo.png
+  favicon: /assets/logo.png
+
   font:
     text: Tajawal
 
@@ -35,7 +41,6 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to system preference
-  name: material
 
   features:
     - navigation.instant
@@ -51,22 +56,24 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    
     - content.code.copy
 
+# Plugins 
 plugins:
   - offline
   - search
-  - blog:
-      archive: false
-      post_excerpt: optional
   - tags:
       tags_file: tags.md
   - glightbox
 
+# MD Extentions
 markdown_extensions:
+
+  # Python Markdown
   - attr_list
   - md_in_html
-  - attr_list
+  - def_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -82,25 +89,64 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
-  - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
+  - abbr
+  - admonition
+  - footnotes
+  - tables
+  - toc:
+      title: On this page
+      permalink: ⚓︎
+      baselevel: 3
+      toc_depth: 6
+      separator: "_"
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
 
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.critic:
+      mode: view
+
+  # blog
+  - meta
+
+# Nav bar pages
 nav:
   - الصفحة الرئيسية: index.md
-  - حول:
-      - عن المطور: about/about-me.md
-      - عن المدونة: about/about-my-blog.md
-  - المدونة:
-      - blog/index.md
+  - المدونة: 
+      # All blog content
+      - posts.md
+      - Posts/iot.md
+  - عن المدونة: about.md
   - الأوسمة: tags.md
 
+# Social links and Blog info
 extra:
   generator: false
   social:
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/abokamal09
+      name: Facebook
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/ahmedkamaldev/
-
-copyright: حقوق النشر &copy; 2024 - 2025 أحمد كمال
+      name: Linkedin
+      
+  blog:
+    dir: Posts
+    author: Ahmed Kamal
+    author_image: /assets/logo.png
+    words_read_per_minute: 300
+    list_length: 5
+    extended_preview: true
