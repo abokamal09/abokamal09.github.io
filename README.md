@@ -1,6 +1,6 @@
 <div style="text-align: center;">
 
-# AboKamal Blog <img src="./docs/logo.png" style="width: 25px">
+# AboKamal Blog <img src="./docs/assets/logo.png" style="width: 25px">
 
 ![](./docs/assets/banner.png)
 </div>
