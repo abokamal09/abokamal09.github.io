@@ -2,7 +2,7 @@
 
 # AboKamal Blog <img src="./docs/logo.png" style="width: 25px">
 
-![](./docs/assets/hero.png)
+![](./docs/assets/banner.png)
 </div>
 
 ## About Blog
