@@ -1,0 +1,241 @@
+:root {
+  /* Base Palette Variables */
+  --md-primary-fg-color: #d4a373; /* Subdued amber / soft bronze */
+  --md-primary-fg-color--light: #eac4a3;
+  --md-primary-fg-color--dark: #b58055;
+  --md-primary-bg-color: #f9f5f0; /* Soft, warm background */
+  --md-primary-bg-color--light: #fdfbfa;
+
+  --md-accent-fg-color: #b58055;
+  --md-accent-fg-color--transparent: rgba(181, 128, 85, 0.1);
+  --md-accent-bg-color: #f9f5f0;
+  --md-accent-bg-color--light: #ffffff;
+
+  --md-default-fg-color: #3c2e21; /* Elegant text color */
+  --md-default-fg-color--light: #5a4734;
+  --md-default-fg-color--lighter: #8a735c;
+  --md-default-fg-color--lightest: #bba08a;
+
+  --md-default-bg-color: #f9f5f0;
+  --md-default-bg-color--light: #fdfbfa;
+  --md-default-bg-color--lighter: #ffffff;
+  --md-default-bg-color--lightest: #ffffff;
+
+  --md-code-fg-color: #3c2e21;
+  --md-code-bg-color: #f0ebe1; /* Warm code background */
+
+  --md-typeset-color: var(--md-default-fg-color);
+  --md-typeset-a-color: var(--md-primary-fg-color);
+
+  --md-typeset-table-color: var(--md-default-fg-color);
+  --md-typeset-table-color--light: var(--md-default-bg-color--light);
+
+  --md-typeset-kbd-color: var(--md-default-fg-color);
+  --md-typeset-kbd-border-color: var(--md-default-fg-color--lightest);
+  --md-typeset-mark-color: rgba(212, 163, 115, 0.3);
+
+  --md-footer-bg-color: #ece6de;
+  --md-footer-bg-color--dark: #dfd7cc;
+  --md-footer-fg-color: #5a4734;
+  --md-footer-fg-color--light: #8a735c;
+}
+
+/* Typography Overrides */
+body,
+input,
+.md-header,
+.md-nav,
+.md-footer,
+.md-typeset pre > code {
+  font-family: "Tajawal", sans-serif;
+  line-height: 1.8;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: "Tajawal", sans-serif;
+  color: #2a1f16;
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.4;
+}
+
+/* Header and Navigation adjustments */
+.md-header {
+  box-shadow: 0 4px 15px rgba(60, 46, 33, 0.04);
+  background-color: var(--md-primary-bg-color);
+  color: var(--md-default-fg-color);
+}
+.md-tabs,
+.md-header-nav__button,
+.md-search__input {
+  background-color: var(--md-primary-bg-color--light);
+}
+
+/* Lists */
+.md-typeset ul,
+.md-typeset ol {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  color: var(--md-default-fg-color);
+}
+.md-typeset li {
+  margin-bottom: 0.5em;
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--md-primary-fg-color--dark);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--md-primary-fg-color--dark);
+  transition: all 0.2s ease;
+}
+.md-typeset a:hover {
+  color: var(--md-primary-fg-color);
+  border-bottom-style: solid;
+}
+
+/* Buttons */
+.md-button {
+  background-color: var(--md-primary-fg-color);
+  color: #ffffff !important;
+  border-radius: 6px;
+  font-family: "Tajawal", sans-serif;
+  border: none;
+}
+.md-button:hover {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+/* Code Blocks */
+.md-typeset pre {
+  background-color: var(--md-code-bg-color);
+  border-radius: 8px;
+  border: 1px solid #e3dfd9; /* Subtle border */
+  box-shadow: 0 2px 8px rgba(60, 46, 33, 0.03);
+}
+
+.md-typeset pre > code {
+  font-size: 0.9em;
+  padding: 1rem;
+  color: var(--md-code-fg-color);
+  background-color: transparent;
+}
+
+.md-typeset code {
+  background-color: rgba(
+    60,
+    46,
+    33,
+    0.06
+  ); /* Very light warm grey for inline code */
+  color: #b58055;
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-family: "Tajawal", monospace;
+}
+
+/* Code Block Syntax Highlighting Overrides for Warm Aesthetic */
+.md-typeset .hll {
+  background-color: rgba(212, 163, 115, 0.2);
+}
+.md-typeset .c {
+  color: #8a735c;
+  font-style: italic;
+} /* Comments */
+.md-typeset .k {
+  color: #b58055;
+  font-weight: bold;
+} /* Keywords */
+.md-typeset .s {
+  color: #5b8a72;
+} /* Strings (soft sage green for contrast) */
+.md-typeset .n {
+  color: #3c2e21;
+} /* Names */
+.md-typeset .o {
+  color: #8a735c;
+} /* Operators */
+.md-typeset .p {
+  color: #5a4734;
+} /* Punctuation */
+.md-typeset .nf {
+  color: #a56e47;
+  font-weight: bold;
+} /* Functions */
+.md-typeset .nc {
+  color: #b58055;
+  font-weight: bold;
+} /* Classes */
+
+/* Tables */
+.md-typeset table {
+  background-color: var(--md-default-bg-color--light);
+  border: 1px solid #e3dfd9;
+  border-radius: 8px;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.md-typeset table th {
+  background-color: #ece6de;
+  color: #3c2e21;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-bottom: 2px solid #e3dfd9;
+}
+
+.md-typeset table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e3dfd9;
+}
+
+.md-typeset table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Blockquotes */
+.md-typeset[dir="rtl"] blockquote {
+  border-right: 4px solid var(--md-primary-fg-color);
+  border-left: none;
+  padding-right: 1.5em;
+  padding-left: 0;
+  margin-right: 0;
+}
+.md-typeset[dir="ltr"] blockquote {
+  border-left: 4px solid var(--md-primary-fg-color);
+  border-right: none;
+  padding-left: 1.5em;
+  padding-right: 0;
+  margin-left: 0;
+}
+.md-typeset blockquote {
+  color: var(--md-default-fg-color--light);
+  background-color: var(--md-default-bg-color--light);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 4px;
+  font-style: italic;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.01);
+}
+
+/* Cards / Admonitions */
+.md-typeset .admonition,
+.md-typeset details {
+  border-color: #e3dfd9;
+  background-color: #fdfbfa;
+  box-shadow: 0 4px 10px rgba(60, 46, 33, 0.05);
+  border-radius: 6px;
+}
+.md-typeset .admonition-title {
+  background-color: #ece6de;
+  color: #3c2e21;
+  border-bottom: 1px solid #e3dfd9;
+}

@@ -1,0 +1,28 @@
+site_name: The Serene Digital Garden
+theme:
+  name: material
+  language: ar
+  direction: rtl
+  palette:
+    - primary: custom
+      accent: custom
+  font:
+    text: Tajawal
+    code: Tajawal
+
+plugins:
+  - search
+  - blog
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - tables
+
+extra_css:
+  - stylesheets/extra.css
