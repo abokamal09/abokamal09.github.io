@@ -1,10 +1,15 @@
 site_name: The Serene Digital Garden
+site_url: "https://abokamal09.github.io/digital-garden/"
 theme:
   name: material
   custom_dir: theme
   language: ar
   direction: rtl
   logo: assets/logo-light.png
+  features:
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
   palette:
     - scheme: default
       primary: custom
@@ -27,15 +32,33 @@ plugins:
   - blog:
       blog_dir: .
       blog_toc: false
+  # ── Social Cards ────────────────────────────────────────────────────────────
+  # The social plugin requires cairosvg, which depends on the native Cairo C
+  # library. On Windows, this requires MSYS2:
+  #   pacman -S mingw-w64-x86_64-python-cairosvg
+  # On Linux/CI (e.g. GitHub Actions), it is available out of the box.
+  # The background image (docs/assets/social-bg.png) is ready for use.
+  # Uncomment the block below when deploying on Linux/CI:
+  #
+  # - social:
+  #     cards_layout_options:
+  #       background_image: docs/assets/social-bg.png
+  #       background_color: "#1E1E2E"
+  #       color: "#F9F5F0"
+  # ────────────────────────────────────────────────────────────────────────────
 
 markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.mark
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.superfences
-  - admonition
-  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
   - tables
 
 extra_css:
