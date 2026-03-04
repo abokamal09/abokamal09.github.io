@@ -3,16 +3,28 @@ theme:
   name: material
   language: ar
   direction: rtl
+  logo: assets/logo-light.png
   palette:
-    - primary: custom
+    - scheme: default
+      primary: custom
       accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   font:
     text: Tajawal
     code: Tajawal
 
 plugins:
   - search
-  - blog
+  - blog:
+      blog_dir: .
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -26,3 +38,12 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/yourusername
+      name: LinkedIn

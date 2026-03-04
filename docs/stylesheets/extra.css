@@ -1,9 +1,10 @@
-:root {
-  /* Base Palette Variables */
-  --md-primary-fg-color: #d4a373; /* Subdued amber / soft bronze */
+:root,
+[data-md-color-scheme="default"] {
+  /* === Light Mode: Vintage Beige Palette === */
+  --md-primary-fg-color: #d4a373;
   --md-primary-fg-color--light: #eac4a3;
   --md-primary-fg-color--dark: #b58055;
-  --md-primary-bg-color: #f9f5f0; /* Soft, warm background */
+  --md-primary-bg-color: #f9f5f0;
   --md-primary-bg-color--light: #fdfbfa;
 
   --md-accent-fg-color: #b58055;
@@ -11,7 +12,7 @@
   --md-accent-bg-color: #f9f5f0;
   --md-accent-bg-color--light: #ffffff;
 
-  --md-default-fg-color: #3c2e21; /* Elegant text color */
+  --md-default-fg-color: #3c2e21;
   --md-default-fg-color--light: #5a4734;
   --md-default-fg-color--lighter: #8a735c;
   --md-default-fg-color--lightest: #bba08a;
@@ -22,25 +23,77 @@
   --md-default-bg-color--lightest: #ffffff;
 
   --md-code-fg-color: #3c2e21;
-  --md-code-bg-color: #f0ebe1; /* Warm code background */
+  --md-code-bg-color: #f0ebe1;
 
   --md-typeset-color: var(--md-default-fg-color);
   --md-typeset-a-color: var(--md-primary-fg-color);
-
   --md-typeset-table-color: var(--md-default-fg-color);
-  --md-typeset-table-color--light: var(--md-default-bg-color--light);
-
-  --md-typeset-kbd-color: var(--md-default-fg-color);
-  --md-typeset-kbd-border-color: var(--md-default-fg-color--lightest);
   --md-typeset-mark-color: rgba(212, 163, 115, 0.3);
 
   --md-footer-bg-color: #ece6de;
   --md-footer-bg-color--dark: #dfd7cc;
   --md-footer-fg-color: #5a4734;
   --md-footer-fg-color--light: #8a735c;
+
+  /* Syntax highlighting - warm earth tones */
+  --syn-c: #8a735c;
+  --syn-k: #b58055;
+  --syn-s: #5b8a72;
+  --syn-n: #3c2e21;
+  --syn-o: #8a735c;
+  --syn-p: #5a4734;
+  --syn-nf: #a56e47;
+  --syn-nc: #b58055;
 }
 
-/* Typography Overrides */
+[data-md-color-scheme="slate"] {
+  /* === Dark Mode: Sleek Modern Slate === */
+  --md-primary-fg-color: #7c9cbf; /* Muted steel blue accent */
+  --md-primary-fg-color--light: #a8c4d8;
+  --md-primary-fg-color--dark: #5a7f9e;
+  --md-primary-bg-color: #1e1e2e; /* Deep slate background */
+  --md-primary-bg-color--light: #252535;
+
+  --md-accent-fg-color: #89b4fa; /* Soft periwinkle accent */
+  --md-accent-fg-color--transparent: rgba(137, 180, 250, 0.1);
+  --md-accent-bg-color: #1e1e2e;
+  --md-accent-bg-color--light: #2a2a3d;
+
+  --md-default-fg-color: #cdd6f4; /* Soft off-white text */
+  --md-default-fg-color--light: #a6aec9;
+  --md-default-fg-color--lighter: #7a82a0;
+  --md-default-fg-color--lightest: #505571;
+
+  --md-default-bg-color: #1e1e2e; /* Main background */
+  --md-default-bg-color--light: #252535; /* Slightly lighter surface */
+  --md-default-bg-color--lighter: #2a2a3d; /* Card/code backgrounds */
+  --md-default-bg-color--lightest: #181825; /* Deepest shadow */
+
+  --md-code-fg-color: #cdd6f4;
+  --md-code-bg-color: #181825; /* Very dark for code blocks */
+
+  --md-typeset-color: var(--md-default-fg-color);
+  --md-typeset-a-color: var(--md-accent-fg-color);
+  --md-typeset-table-color: var(--md-default-fg-color);
+  --md-typeset-mark-color: rgba(137, 180, 250, 0.2);
+
+  --md-footer-bg-color: #181825;
+  --md-footer-bg-color--dark: #11111b;
+  --md-footer-fg-color: #a6aec9;
+  --md-footer-fg-color--light: #7a82a0;
+
+  /* Syntax highlighting - vibrant but professional for dark */
+  --syn-c: #6c7086; /* Comments - muted gray */
+  --syn-k: #cba6f7; /* Keywords - lavender */
+  --syn-s: #a6e3a1; /* Strings - soft green */
+  --syn-n: #cdd6f4; /* Names - off-white */
+  --syn-o: #89dceb; /* Operators - soft cyan */
+  --syn-p: #bac2de; /* Punctuation - light gray */
+  --syn-nf: #89b4fa; /* Functions - soft blue */
+  --syn-nc: #f38ba8; /* Classes - soft red-pink */
+}
+
+/* ====== TYPOGRAPHY ====== */
 body,
 input,
 .md-header,
@@ -58,37 +111,48 @@ input,
 .md-typeset h5,
 .md-typeset h6 {
   font-family: "Tajawal", sans-serif;
-  color: #2a1f16;
+  color: var(--md-default-fg-color);
   font-weight: 700;
   margin-top: 2em;
   margin-bottom: 1em;
   line-height: 1.4;
 }
 
-/* Header and Navigation adjustments */
+/* ====== HEADER ====== */
 .md-header {
-  box-shadow: 0 4px 15px rgba(60, 46, 33, 0.04);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
   background-color: var(--md-primary-bg-color);
   color: var(--md-default-fg-color);
 }
 .md-tabs,
-.md-header-nav__button,
-.md-search__input {
+.md-header-nav__button {
   background-color: var(--md-primary-bg-color--light);
 }
 
-/* Lists */
-.md-typeset ul,
-.md-typeset ol {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  color: var(--md-default-fg-color);
+/* ====== SEARCH BAR ====== */
+.md-search__input {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  color: var(--md-default-fg-color) !important;
 }
-.md-typeset li {
-  margin-bottom: 0.5em;
+[data-md-color-scheme="slate"] .md-search__input {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--md-default-fg-color) !important;
+}
+.md-search__input::placeholder {
+  color: var(--md-default-fg-color--lighter) !important;
 }
 
-/* Links */
+/* ====== DUAL LOGO SWAP ====== */
+/* Show logo-light.png in light mode */
+[data-md-color-scheme="default"] .md-header__button.md-logo img {
+  content: url("../assets/logo-light.png");
+}
+/* Show logo-dark.ico in dark mode */
+[data-md-color-scheme="slate"] .md-header__button.md-logo img {
+  content: url("../assets/logo-dark.ico");
+}
+
+/* ====== LINKS ====== */
 .md-typeset a {
   color: var(--md-primary-fg-color--dark);
   text-decoration: none;
@@ -99,11 +163,19 @@ input,
   color: var(--md-primary-fg-color);
   border-bottom-style: solid;
 }
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: var(--md-accent-fg-color);
+  border-bottom-color: var(--md-accent-fg-color);
+}
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: var(--md-primary-fg-color--light);
+  border-bottom-color: var(--md-primary-fg-color--light);
+}
 
-/* Buttons */
+/* ====== BUTTONS ====== */
 .md-button {
   background-color: var(--md-primary-fg-color);
-  color: #ffffff !important;
+  color: var(--md-default-bg-color) !important;
   border-radius: 6px;
   font-family: "Tajawal", sans-serif;
   border: none;
@@ -112,96 +184,97 @@ input,
   background-color: var(--md-primary-fg-color--dark);
 }
 
-/* Code Blocks */
-.md-typeset pre {
-  background-color: var(--md-code-bg-color);
-  border-radius: 8px;
-  border: 1px solid #e3dfd9; /* Subtle border */
-  box-shadow: 0 2px 8px rgba(60, 46, 33, 0.03);
+/* ====== LISTS ====== */
+.md-typeset ul,
+.md-typeset ol {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  color: var(--md-default-fg-color);
+}
+.md-typeset li {
+  margin-bottom: 0.5em;
 }
 
+/* ====== CODE BLOCKS ====== */
+.md-typeset pre {
+  background-color: var(--md-code-bg-color);
+  border-radius: 10px;
+  border: 1px solid var(--md-default-bg-color--lighter);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
 .md-typeset pre > code {
-  font-size: 0.9em;
-  padding: 1rem;
+  font-size: 0.875em;
+  padding: 1.1rem;
   color: var(--md-code-fg-color);
   background-color: transparent;
 }
-
 .md-typeset code {
-  background-color: rgba(
-    60,
-    46,
-    33,
-    0.06
-  ); /* Very light warm grey for inline code */
-  color: #b58055;
+  background-color: var(--md-default-bg-color--lighter);
+  color: var(--md-accent-fg-color);
   border-radius: 4px;
-  padding: 0.2em 0.4em;
+  padding: 0.2em 0.45em;
   font-family: "Tajawal", monospace;
 }
 
-/* Code Block Syntax Highlighting Overrides for Warm Aesthetic */
+/* Syntax highlighting tokens */
 .md-typeset .hll {
-  background-color: rgba(212, 163, 115, 0.2);
+  background-color: var(--md-accent-fg-color--transparent);
 }
 .md-typeset .c {
-  color: #8a735c;
+  color: var(--syn-c);
   font-style: italic;
-} /* Comments */
+}
 .md-typeset .k {
-  color: #b58055;
+  color: var(--syn-k);
   font-weight: bold;
-} /* Keywords */
+}
 .md-typeset .s {
-  color: #5b8a72;
-} /* Strings (soft sage green for contrast) */
+  color: var(--syn-s);
+}
 .md-typeset .n {
-  color: #3c2e21;
-} /* Names */
+  color: var(--syn-n);
+}
 .md-typeset .o {
-  color: #8a735c;
-} /* Operators */
+  color: var(--syn-o);
+}
 .md-typeset .p {
-  color: #5a4734;
-} /* Punctuation */
+  color: var(--syn-p);
+}
 .md-typeset .nf {
-  color: #a56e47;
+  color: var(--syn-nf);
   font-weight: bold;
-} /* Functions */
+}
 .md-typeset .nc {
-  color: #b58055;
+  color: var(--syn-nc);
   font-weight: bold;
-} /* Classes */
+}
 
-/* Tables */
+/* ====== TABLES ====== */
 .md-typeset table {
   background-color: var(--md-default-bg-color--light);
-  border: 1px solid #e3dfd9;
+  border: 1px solid var(--md-default-bg-color--lighter);
   border-radius: 8px;
   overflow: hidden;
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
 }
-
 .md-typeset table th {
-  background-color: #ece6de;
-  color: #3c2e21;
+  background-color: var(--md-footer-bg-color);
+  color: var(--md-default-fg-color);
   font-weight: 700;
   padding: 12px 16px;
-  border-bottom: 2px solid #e3dfd9;
+  border-bottom: 2px solid var(--md-default-bg-color--lighter);
 }
-
 .md-typeset table td {
   padding: 12px 16px;
-  border-bottom: 1px solid #e3dfd9;
+  border-bottom: 1px solid var(--md-default-bg-color--lighter);
 }
-
 .md-typeset table tr:last-child td {
   border-bottom: none;
 }
 
-/* Blockquotes */
+/* ====== BLOCKQUOTES ====== */
 .md-typeset[dir="rtl"] blockquote {
   border-right: 4px solid var(--md-primary-fg-color);
   border-left: none;
@@ -223,19 +296,30 @@ input,
   padding-bottom: 1em;
   border-radius: 4px;
   font-style: italic;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.01);
 }
 
-/* Cards / Admonitions */
+/* ====== ADMONITIONS / CARDS ====== */
 .md-typeset .admonition,
 .md-typeset details {
-  border-color: #e3dfd9;
-  background-color: #fdfbfa;
-  box-shadow: 0 4px 10px rgba(60, 46, 33, 0.05);
+  border-color: var(--md-default-bg-color--lighter);
+  background-color: var(--md-default-bg-color--light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border-radius: 6px;
 }
 .md-typeset .admonition-title {
-  background-color: #ece6de;
-  color: #3c2e21;
-  border-bottom: 1px solid #e3dfd9;
+  background-color: var(--md-footer-bg-color);
+  color: var(--md-default-fg-color);
+  border-bottom: 1px solid var(--md-default-bg-color--lighter);
+}
+
+/* ====== DARK MODE HEADER - ensure proper bg ====== */
+[data-md-color-scheme="slate"] .md-header {
+  background-color: #181825;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+[data-md-color-scheme="slate"] .md-nav {
+  background-color: var(--md-default-bg-color);
+}
+[data-md-color-scheme="slate"] .md-sidebar {
+  background-color: var(--md-default-bg-color);
 }
