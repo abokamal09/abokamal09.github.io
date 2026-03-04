@@ -40,11 +40,11 @@ plugins:
   # The background image (docs/assets/social-bg.png) is ready for use.
   # Uncomment the block below when deploying on Linux/CI:
   #
-  # - social:
-  #     cards_layout_options:
-  #       background_image: docs/assets/social-bg.png
-  #       background_color: "#1E1E2E"
-  #       color: "#F9F5F0"
+  - social:
+      cards_layout_options:
+        # background_image: docs/assets/social-bg.png
+        background_color: "#1E1E2E"
+        color: "#F9F5F0"
   # ────────────────────────────────────────────────────────────────────────────
 
 markdown_extensions:
