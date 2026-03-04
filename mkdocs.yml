@@ -1,5 +1,5 @@
 site_name: The Serene Digital Garden
-site_url: "https://abokamal09.github.io/digital-garden/"
+site_url: "https://abokamal09.github.io/"
 theme:
   name: material
   custom_dir: theme
