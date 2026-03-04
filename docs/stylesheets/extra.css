@@ -323,3 +323,30 @@ input,
 [data-md-color-scheme="slate"] .md-sidebar {
   background-color: var(--md-default-bg-color);
 }
+
+/* ====== SIDEBAR: Remove Blog plugin's redundant nav entries ======
+   Blog plugin with blog_dir: . generates:
+     [0] Blog → /          (active root link — HIDE)
+     [1] Blog → section    (keep: label with Archive, Categories, Posts)
+          [0] Blog → /blog  (internal link — HIDE)
+   Archive and Categories remain visible.
+*/
+
+/* Hide item[0]: the top-level standalone Blog link in sidebar */
+.md-sidebar--primary
+  .md-nav--primary
+  > .md-nav__list
+  > .md-nav__item:first-child {
+  display: none !important;
+}
+
+/* Hide the inner /blog/ Blog link (first child of item[1]'s nav list) */
+.md-sidebar--primary
+  .md-nav--primary
+  > .md-nav__list
+  > .md-nav__item:nth-child(2)
+  > .md-nav
+  > .md-nav__list
+  > .md-nav__item:first-child {
+  display: none !important;
+}
