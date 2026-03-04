@@ -42,9 +42,9 @@ plugins:
   #
   - social:
       cards_layout_options:
-        # background_image: docs/assets/social-bg.png
-        background_color: "#1E1E2E"
-        color: "#F9F5F0"
+        background_color: "#F9F5F0"
+        color: "#3C2E21"
+        font_family: "Tajawal"
   # ────────────────────────────────────────────────────────────────────────────
 
 markdown_extensions:
