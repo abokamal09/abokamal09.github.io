@@ -5,24 +5,31 @@ theme:
   custom_dir: theme
   language: ar
   direction: rtl
-  logo: assets/logo-light.png
+  logo: assets/logo-dark.ico
+  favicon: assets/logo-dark.ico
   features:
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
   palette:
-    - scheme: default
-      primary: custom
-      accent: custom
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: brown
+      accent: deep orange
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: custom
-      accent: custom
+      accent: blue
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Switch to system preference
   font:
     text: Tajawal
     code: Tajawal
@@ -42,8 +49,8 @@ plugins:
   #
   - social:
       cards_layout_options:
-        background_color: "#F9F5F0"
-        color: "#3C2E21"
+        background_color: "#0D1117"
+        color: "#C9D1D9"
         font_family: "Tajawal"
   # ────────────────────────────────────────────────────────────────────────────
 
