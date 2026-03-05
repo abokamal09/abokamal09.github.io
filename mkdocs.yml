@@ -11,6 +11,12 @@ theme:
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
+    - navigation.top        # Back-to-top button
+    - navigation.tracking   # Updates URL hash as user scrolls
+    - header.autohide       # Hides header on scroll down for reading focus
+    - search.suggest        # Auto-complete suggestions in search
+    - search.highlight      # Highlights search terms within the page
+    - toc.follow            # Active section tracking in right sidebar
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -18,15 +24,15 @@ theme:
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: brown
-      accent: deep orange
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: custom
-      accent: blue
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
