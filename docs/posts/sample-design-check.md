@@ -16,7 +16,7 @@ This note serves as a comprehensive visual verification tool for the new Serene 
 
 ## Typography & Headers (الخطوط والعناوين)
 
-Here is a quick display of header hierarchy.
+Here is a quick display of header hierarchy. Wait, this text needs to be well spaced.
 يتميز الخط العربي المستخدم "Tajawal" بأناقته ومرونته في الواجهات الرقمية.
 
 ### H3: The Flow of Ideas (تدفق الأفكار)
@@ -51,7 +51,7 @@ Blockquotes are often used to highlight important thoughts extracted from Obsidi
 
 ## Code Blocks & Syntax Highlighting (كتل الأكواد)
 
-Code blocks should have a warm background, beautifully matching the serene overall theme.
+Code blocks should have a warm background, beautifully matching the serene overall theme rather than using harsh dark defaults. Note the soft sage greens and warm browns.
 
 ```javascript
 // Function to generate a serene color palette
@@ -75,6 +75,8 @@ Inline code like `pip install mkdocs-material` should also blend effortlessly in
 
 ## Tables (الجداول)
 
+A table showcasing some palette values to check table styling, borders, and header background colors:
+
 | العنصر (Element)          | القيمة اللونية (Color Value) | الوصف (Description)       |
 | :------------------------ | :--------------------------: | :------------------------ |
 | **الخلفية** (Background)  |          `#F9F5F0`           | A very soft, warm beige   |
@@ -84,7 +86,7 @@ Inline code like `pip install mkdocs-material` should also blend effortlessly in
 
 ## Links and Interactive Elements (الروابط والعناصر التفاعلية)
 
-Links should stand out gracefully. Here is a link to the [MkDocs Material Documentation](https://squidfunk.github.io/mkdocs-material/).
+Links should stand out gracefully without disrupting the visual flow. Here is a link to the [MkDocs Material Documentation](https://squidfunk.github.io/mkdocs-material/). You can also check standard buttons if needed.
 
 ---
 

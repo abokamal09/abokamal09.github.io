@@ -48,7 +48,7 @@ Examples of highlighted text in context:
 Tabs let you organize related content side by side without nesting or long scrolls.
 
 === "JavaScript"
-``javascript title="fetch-data.js"
+    ```javascript title="fetch-data.js"
     async function fetchData(endpoint) {
       const response = await fetch(endpoint);
       if (!response.ok) {
@@ -56,11 +56,11 @@ Tabs let you organize related content side by side without nesting or long scrol
       }
       return response.json();
     }
-    ``
+    ```
 
 === "Python"
-```python title="fetch_data.py"
-import httpx
+    ```python title="fetch_data.py"
+    import httpx
 
     async def fetch_data(endpoint: str) -> dict:
         async with httpx.AsyncClient() as client:
@@ -70,7 +70,7 @@ import httpx
     ```
 
 === "Go"
-`go title="fetch_data.go"
+    ```go title="fetch_data.go"
     func fetchData(endpoint string) (map[string]interface{}, error) {
         resp, err := http.Get(endpoint)
         if err != nil {
@@ -81,7 +81,7 @@ import httpx
         json.NewDecoder(resp.Body).Decode(&result)
         return result, nil
     }
-    `
+    ```
 
 ---
 

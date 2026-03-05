@@ -1,2 +1,3 @@
-# Blog
-
+---
+title: The Serene Digital Garden
+---
